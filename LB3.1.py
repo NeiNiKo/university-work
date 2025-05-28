@@ -61,7 +61,7 @@ def delete_user(login, password):
     cursor.execute('SELECT * FROM users WHERE login = ? AND password = ?', (login, hashed_pw))
     result = cursor.fetchone()
 
-    #Скажемо чи існує той кого видалити треба і чи успішно він увійшов під його ллогіном
+    #Скажемо чи існує той кого видалити треба і чи успішно він увійшов під його логіном
     if not result:
         print("Користувача не знайдено, або невірний пароль.")
         return
